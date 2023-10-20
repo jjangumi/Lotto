@@ -1,3 +1,5 @@
+package example;
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -45,8 +47,9 @@ class  Lotto{
         }
     }
     public void outputResult(){ //랜덤으로 돌린 로또 번호 출력
-        for (int i=0; i<set.length; i++)
-            System.out.printf("%3d", set[i]); //3칸으로 맞춰서 출력해주세요 (출력수가 자릿수마다 땡겨져서 중구난방이 아니라 깔끔해짐)
+        for (int i=0; i<set.length; i++){
+            System.out.printf("%3d",set[i]); //3칸으로 맞춰서 출력해주세요 (출력수가 자릿수마다 땡겨져서 중구난방이 아니라 깔끔해짐)
+        }
         System.out.println(); //배열 하나 출력할때마다 줄넘김
     }
     public void doLotto(){
@@ -64,4 +67,5 @@ public class Main {
         Lotto lotto = new Lotto(); //로또 객체를 생성하여
         lotto.doLotto(); //실행합니다!
     }
+
 }
